@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.timeout {
+  display: flex;
+}
+.clock {
+  display: flex;
+  text-align: center;
+}
+.clock .inn {
+  letter-spacing: 0.05em;
+  font-size: 80px;
+  padding: 5px 0;
+}
+.clock .date {
+  letter-spacing: 0.1em;
+  font-size: 24px;
+}
+.clock .text {
+  font-size: 12px;
+  padding: 20px 0 0;
+}
+.flip-clock-before,
+.flip-clock-active a .up,
+.flip-clock-label {
+  display: none;
+}
+.flip li a {
+  text-decoration: none;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 80px;
+  cursor: auto;
+  color: #90ff03;
+}
+
+.flip-clock-divider {
+  float: left;
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 100px;
+}
+
+.flip-clock-dot.top {
+  top: 60px;
+}
+
+.flip-clock-dot {
+  display: block;
+  background: #90ff03;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  left: 5px;
+  top: 30px;
+}
+
+.timeout_tile {
+  color: #90ff03;
+  font-family: "PT Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+@media (max-width: 1050px) {
+  .clock .inn {
+    font-size: 60px;
+  }
+
+  .flip-clock-divider {
+    height: 70px;
+  }
+
+  .flip-clock-dot {
+    top: 20px;
+  }
+
+  .flip-clock-dot.top {
+    top: 45px;
+  }
+}
+
+@media (max-width: 1007px) {
+  .timeout {
+    flex-direction: column;
+  }
+
+  .clock {
+    justify-content: center;
+  }
+
+  .timeout_tile {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 820px) {
+  .clock {
+    justify-content: flex-start;
+  }
+  .timeout_tile {
+    text-align: left;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .clock .inn {
+    font-size: 30px;
+  }
+  .clock {
+    margin-left: 30px;
+  }
+  .timeout_tile {
+    font-size: 14px;
+  }
+  .flip-clock-divider {
+    height: 0;
+  }
+  .flip-clock-dot {
+    height: 5px;
+    width: 5px;
+  }
+
+  .flip-clock-dot {
+    top: 15px;
+  }
+
+  .flip-clock-dot.top {
+    top: 27px;
+  }
+}
